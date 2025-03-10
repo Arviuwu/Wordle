@@ -9,7 +9,17 @@
     <Grid>
         <Border  BorderBrush="Black" BorderThickness="1">
             <Viewbox Stretch="UniformToFill">
-                <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="DimGray" BorderThickness="0"   TextAlignment="Center" FontSize="50" Name="tbxInputBox" />
+                <TextBox HorizontalAlignment="Stretch" 
+                         VerticalAlignment="Stretch" 
+                         Background="DimGray" 
+                         BorderThickness="0"   
+                         TextAlignment="Center" 
+                         FontSize="20" 
+                         Name="tbxInputBox" 
+                         PreviewKeyDown="tbxInputBox_PreviewKeyDown"
+                         TextChanged="tbxInputBox_TextChanged"
+                        MaxLength="1"
+                         />
             </Viewbox>
         </Border>
         

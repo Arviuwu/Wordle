@@ -16,10 +16,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <UserControls:InputBox Grid.Column="0"/>
-        <UserControls:InputBox Grid.Column="1"/>
-        <UserControls:InputBox Grid.Column="2"/>
-        <UserControls:InputBox Grid.Column="3"/>
-        <UserControls:InputBox Grid.Column="4"/>
+        <UserControls:InputBox Grid.Column="0" ColNum="0" Margin="2 7 2 7"/>
+        <UserControls:InputBox Grid.Column="1" ColNum="1" Margin="2 7 2 7"/>
+        <UserControls:InputBox Grid.Column="2" ColNum="2" Margin="2 7 2 7"/>
+        <UserControls:InputBox Grid.Column="3" ColNum="3" Margin="2 7 2 7"/>
+        <UserControls:InputBox Grid.Column="4" ColNum="4" Margin="2 7 2 7"/>
     </Grid>
 </UserControl>

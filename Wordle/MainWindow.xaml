@@ -1,11 +1,12 @@
-﻿<Window x:Class="Wordle.MainWindow"
+﻿
+    <Window x:Class="Wordle.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wordle"
         xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
-   
+       
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid HorizontalAlignment="Stretch">
@@ -24,11 +25,11 @@
                 <RowDefinition/>
              
             </Grid.RowDefinitions>
-            <UserControls:InputLine Grid.Row="0"/>
-            <UserControls:InputLine Grid.Row="1"/>
-            <UserControls:InputLine Grid.Row="2"/>
-            <UserControls:InputLine Grid.Row="3"/>
-            <UserControls:InputLine Grid.Row="4"/>
+            <UserControls:InputLine Grid.Row="0" RowNum="0"/>
+            <UserControls:InputLine Grid.Row="1" RowNum="1"/>
+            <UserControls:InputLine Grid.Row="2" RowNum="2"/>
+            <UserControls:InputLine Grid.Row="3" RowNum="3"/>
+            <UserControls:InputLine Grid.Row="4" RowNum="4"/>
         </Grid>
         
     </Grid>
