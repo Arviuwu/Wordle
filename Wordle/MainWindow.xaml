@@ -22,14 +22,13 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
+             
             </Grid.RowDefinitions>
-            <UserControls:InputLine Grid.Row="0"></UserControls:InputLine>
-                <UserControls:InputLine Grid.Row="1"></UserControls:InputLine>
-                <UserControls:InputLine Grid.Row="2"></UserControls:InputLine>
-                <UserControls:InputLine Grid.Row="3"></UserControls:InputLine>
-                <UserControls:InputLine Grid.Row="4"></UserControls:InputLine>
-                <UserControls:InputLine Grid.Row="5"></UserControls:InputLine>
+            <UserControls:InputLine Grid.Row="0"/>
+            <UserControls:InputLine Grid.Row="1"/>
+            <UserControls:InputLine Grid.Row="2"/>
+            <UserControls:InputLine Grid.Row="3"/>
+            <UserControls:InputLine Grid.Row="4"/>
         </Grid>
         
     </Grid>

@@ -21,6 +21,5 @@
         <UserControls:InputBox Grid.Column="2"/>
         <UserControls:InputBox Grid.Column="3"/>
         <UserControls:InputBox Grid.Column="4"/>
-        <UserControls:InputBox Grid.Column="5"/>
     </Grid>
 </UserControl>
