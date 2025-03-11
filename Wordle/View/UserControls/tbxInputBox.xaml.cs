@@ -43,6 +43,7 @@ namespace Wordle.View.UserControls
         
         private void tbxInputBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+           
             if (e.Key == Key.Back)
             {
                 if(string.IsNullOrEmpty(tbxInputBox.Text) && ColNum == 0)
@@ -68,6 +69,7 @@ namespace Wordle.View.UserControls
             if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text))
             {
                 FocusNext(tbxInputBox);
+                GetWordGuess();
             }
         }
 
