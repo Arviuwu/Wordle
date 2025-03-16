@@ -24,7 +24,20 @@ namespace Wordle.View.UserControls
             }
         }
 
-        private int myVar;
+        private string wordGuess;
+
+        public string WordGuess
+        {
+            get
+            {
+                return wordGuess;
+            }
+            set
+            {
+                wordGuess = value;
+            }
+        }
+
 
 
         public InputLine()
@@ -36,19 +49,20 @@ namespace Wordle.View.UserControls
         {
             string word = $"{box0.tbxInputBox.Text}{box1.tbxInputBox.Text}{box2.tbxInputBox.Text}{box3.tbxInputBox.Text}{box4.tbxInputBox.Text}";
             Debug.WriteLine(word);
+            WordGuess = word;
             return word;
             
         }
-        void FocusNext(UIElement element)
-        {
-            var request = new TraversalRequest(FocusNavigationDirection.First);
-
-            element.MoveFocus(request);
-        }
+        
 
         private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-          
+            if(e.Key == Key.Enter && !String.IsNullOrEmpty(box4.tbxInputBox.Text))
+            {
+                GetWordGuess();
+               // Debug.WriteLine("Inputline word guess:" + GetWordGuess());
+                
+            }
         }
     }
 }

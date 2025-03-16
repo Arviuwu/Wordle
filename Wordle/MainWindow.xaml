@@ -8,7 +8,8 @@
         xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+            PreviewKeyDown="Window_PreviewKeyDown"  >
     <Grid HorizontalAlignment="Stretch">
         
         <Grid.ColumnDefinitions >
@@ -25,11 +26,11 @@
                 <RowDefinition/>
              
             </Grid.RowDefinitions>
-            <UserControls:InputLine Grid.Row="0" RowNum="0"/>
-            <UserControls:InputLine Grid.Row="1" RowNum="1"/>
-            <UserControls:InputLine Grid.Row="2" RowNum="2"/>
-            <UserControls:InputLine Grid.Row="3" RowNum="3"/>
-            <UserControls:InputLine Grid.Row="4" RowNum="4"/>
+            <UserControls:InputLine x:Name="Inputline0" Grid.Row="0" RowNum="0"/>
+            <UserControls:InputLine x:Name="Inputline1" Grid.Row="1" RowNum="1"/>
+            <UserControls:InputLine x:Name="Inputline2" Grid.Row="2" RowNum="2"/>
+            <UserControls:InputLine x:Name="Inputline3" Grid.Row="3" RowNum="3"/>
+            <UserControls:InputLine x:Name="Inputline4" Grid.Row="4" RowNum="4"/>
         </Grid>
         
     </Grid>

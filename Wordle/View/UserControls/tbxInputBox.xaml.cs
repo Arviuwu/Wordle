@@ -69,7 +69,7 @@ namespace Wordle.View.UserControls
             if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text))
             {
                 FocusNext(tbxInputBox);
-                GetWordGuess();
+                
             }
         }
 

@@ -7,7 +7,7 @@
              xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             PreviewKeyDown="UserControl_PreviewKeyDown">
+             PreviewKeyDown="UserControl_PreviewKeyDown" Tag="{Binding WordGuess}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
