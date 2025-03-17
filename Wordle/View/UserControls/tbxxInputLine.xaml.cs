@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using Wordle.Classes;
 
 namespace Wordle.View.UserControls
 {
@@ -60,8 +62,27 @@ namespace Wordle.View.UserControls
             if(e.Key == Key.Enter && !String.IsNullOrEmpty(box4.tbxInputBox.Text))
             {
                 GetWordGuess();
-               // Debug.WriteLine("Inputline word guess:" + GetWordGuess());
-                
+                // Debug.WriteLine("Inputline word guess:" + GetWordGuess());
+                if (!String.IsNullOrEmpty(WordGuess)) 
+                {
+                    //Check correct letter AND position
+                    ColorControl(box0.tbxInputBox, 0);
+                    ColorControl(box1.tbxInputBox, 1);
+                    ColorControl(box2.tbxInputBox, 2);
+                    ColorControl(box3.tbxInputBox, 3);
+                    ColorControl(box4.tbxInputBox, 4);
+                }
+            }
+        }
+       private void ColorControl(TextBox element, int col)
+        {
+            if (WordDict.testWord[col] == element.Text[0])
+            {
+                element.Background = Brushes.Green;
+            }
+            else if (WordDict.testWord.Contains(element.Text[0]))
+            {
+               element.Background = Brushes.Yellow;
             }
         }
     }

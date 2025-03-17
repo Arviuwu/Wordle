@@ -17,7 +17,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <UserControls:InputBox x:Name="box0"   Grid.Column="0" ColNum="0" Margin="2 7 2 7" />
+        <UserControls:InputBox x:Name="box0"   Grid.Column="0" ColNum="0" Margin="2 7 2 7"  />
         <UserControls:InputBox x:Name="box1" Grid.Column="1" ColNum="1" Margin="2 7 2 7"/>
         <UserControls:InputBox x:Name="box2" Grid.Column="2" ColNum="2" Margin="2 7 2 7"/>
         <UserControls:InputBox x:Name="box3"  Grid.Column="3" ColNum="3" Margin="2 7 2 7"/>
