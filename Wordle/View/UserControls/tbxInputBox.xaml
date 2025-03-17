@@ -17,13 +17,13 @@
                          
                          HorizontalContentAlignment="Center"
                          VerticalContentAlignment="Center"
-                    CharacterCasing="Upper"
+                         CharacterCasing="Upper"
                          FontSize="50" 
-                    FontWeight="Bold"
+                         FontWeight="Bold"
                          Name="tbxInputBox" 
                          PreviewKeyDown="tbxInputBox_PreviewKeyDown"
                          TextChanged="tbxInputBox_TextChanged"
-                        MaxLength="1"
+                         MaxLength="1"
                          Background="Transparent"
                     
                          />

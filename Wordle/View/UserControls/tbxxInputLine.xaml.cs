@@ -85,5 +85,6 @@ namespace Wordle.View.UserControls
                element.Background = Brushes.Yellow;
             }
         }
+        public List<> guessedLetters 
     }
 }
