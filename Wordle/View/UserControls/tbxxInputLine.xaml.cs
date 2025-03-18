@@ -84,7 +84,12 @@ namespace Wordle.View.UserControls
             {
                element.Background = Brushes.Yellow;
             }
+            else
+            {
+               WordDict.notContained.Add(element.Text[0]);
+            }
         }
-        public List<> guessedLetters 
+        
+
     }
 }
