@@ -66,11 +66,10 @@ namespace Wordle.View.UserControls
                 }
             }
 
-            if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text))
+            /*if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text))
             {
                 FocusNext(tbxInputBox);
-                GetWordGuess();
-            }
+            }*/
         }
 
         void FocusLeft(UIElement element)
@@ -85,7 +84,7 @@ namespace Wordle.View.UserControls
 
             element.MoveFocus(request);
         }
-        void FocusNext(UIElement element)
+        public void FocusNext(UIElement element)
         {
             var request = new TraversalRequest(FocusNavigationDirection.Next);
 
