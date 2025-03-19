@@ -8,10 +8,12 @@ namespace Wordle.Classes
         static public List<char> notContained = new List<char> { };
         static public List<char> yellowChars = new List<char> { };
         static public List<char> correctChars = new List<char> { };
-
+        static public string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..","..", "Files", "five_letter_words.txt");
+        static public Action? OnLineCompleted;
+        static public string currentGuess;
         public static void InitializeDict()
         {
-            foreach(var x in File.ReadAllLines("C:\\Users\\jakob\\source\\repos\\Arviuwu\\Wordle\\Wordle\\FIles\\five_letter_words.txt"))
+            foreach(var x in File.ReadAllLines(filePath))
             {
                 words.Add(x);
             }

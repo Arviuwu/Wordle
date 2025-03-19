@@ -22,7 +22,6 @@ public partial class MainWindow : Window
         if(e.Key == Key.Enter)
         {
             Debug.WriteLine("window word guess: " + Inputline0.WordGuess);
-            
         }
         
     }

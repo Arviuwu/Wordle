@@ -4,6 +4,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml.Linq;
+using Wordle.Classes;
+
 
 namespace Wordle.View.UserControls
 {
@@ -16,6 +18,7 @@ namespace Wordle.View.UserControls
         public InputBox()
         {
             InitializeComponent();
+            
         }
 
         private int colNum;
@@ -66,9 +69,11 @@ namespace Wordle.View.UserControls
                 }
             }
 
-            if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text))
+            if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text) && WordDict.words.Contains(WordDict.currentGuess))
             {
-                FocusNext(tbxInputBox);
+
+                FocusNext(tbxInputBox); 
+                
                 
             }
         }

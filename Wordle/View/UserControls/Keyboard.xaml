@@ -25,6 +25,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <UserControls:KeyboardButtom content="A"/>
+        <UserControls:KeyboardButtom Content="A"/>
     </Grid>
 </UserControl>

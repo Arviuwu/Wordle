@@ -10,8 +10,10 @@ namespace Wordle.View.UserControls
     /// <summary>
     /// Interaction logic for InputLine.xaml
     /// </summary>
+    
     public partial class InputLine : UserControl
     {
+        
         private int rowNum;
 
         public int RowNum
@@ -47,12 +49,15 @@ namespace Wordle.View.UserControls
         {
             InitializeComponent();
             
+            
         }
         public string GetWordGuess()
         {
+            
             string word = $"{box0.tbxInputBox.Text}{box1.tbxInputBox.Text}{box2.tbxInputBox.Text}{box3.tbxInputBox.Text}{box4.tbxInputBox.Text}";
             Debug.WriteLine(word);
             WordGuess = word;
+            WordDict.currentGuess = word;
             return word;
         }
         
@@ -61,6 +66,7 @@ namespace Wordle.View.UserControls
         {
             if(e.Key == Key.Enter && !String.IsNullOrEmpty(box4.tbxInputBox.Text))
             {
+            
                 GetWordGuess();
                 // Debug.WriteLine("Inputline word guess:" + GetWordGuess());
                 if (!String.IsNullOrEmpty(WordGuess)) 
@@ -71,6 +77,7 @@ namespace Wordle.View.UserControls
                     ColorControl(box2.tbxInputBox, 2);
                     ColorControl(box3.tbxInputBox, 3);
                     ColorControl(box4.tbxInputBox, 4);
+                
                 }
             }
         }
