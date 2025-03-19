@@ -1,16 +1,6 @@
 ﻿using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Wordle.View.UserControls;
 
 namespace Wordle;
 
@@ -21,10 +11,18 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        InitializeComponent();
+        InitializeComponent();   
         
+    }
+
+    private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+    {
+        if(e.Key == Key.Enter)
+        {
+            Debug.WriteLine("window word guess: " + Inputline0.WordGuess);
+            
+        }
         
     }
     
-
 }

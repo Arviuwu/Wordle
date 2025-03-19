@@ -5,22 +5,29 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="110" d:DesignWidth="100">
+             d:DesignHeight="110" d:DesignWidth="100"
+             Background="DarkGray"
+             >
     <Grid>
         <Border  BorderBrush="Black" BorderThickness="1">
-            <Viewbox Stretch="UniformToFill">
-                <TextBox HorizontalAlignment="Stretch" 
-                         VerticalAlignment="Stretch" 
-                         Background="DimGray" 
+            
+                <TextBox 
                          BorderThickness="0"   
-                         TextAlignment="Center" 
-                         FontSize="20" 
+                          
+                         
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         CharacterCasing="Upper"
+                         FontSize="40" 
+                         FontWeight="Bold"
                          Name="tbxInputBox" 
                          PreviewKeyDown="tbxInputBox_PreviewKeyDown"
                          TextChanged="tbxInputBox_TextChanged"
-                        MaxLength="1"
+                         MaxLength="1"
+                         Background="Transparent"
+                    
                          />
-            </Viewbox>
+            
         </Border>
         
     </Grid>
