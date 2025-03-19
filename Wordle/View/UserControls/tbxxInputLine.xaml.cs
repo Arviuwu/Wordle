@@ -86,7 +86,10 @@ namespace Wordle.View.UserControls
             }
             else
             {
-               WordDict.notContained.Add(element.Text[0]);
+                Color customColor = Color.FromArgb(255, 78, 78, 78);
+                SolidColorBrush customBrush = new SolidColorBrush(customColor);
+                element.Background = customBrush;
+                WordDict.notContained.Add(element.Text[0]);
             }
         }
         

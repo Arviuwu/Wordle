@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
+using Wordle.Classes;
 
 namespace Wordle;
 
@@ -11,7 +12,8 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        InitializeComponent();   
+        InitializeComponent();
+        WordDict.InitializeDict();
         
     }
 
