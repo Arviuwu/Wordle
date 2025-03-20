@@ -68,17 +68,20 @@ namespace Wordle.View.UserControls
             {
             
                 GetWordGuess();
-                // Debug.WriteLine("Inputline word guess:" + GetWordGuess());
-                if (!String.IsNullOrEmpty(WordGuess)) 
+                
+                Debug.WriteLine("test");
+                if (WordDict.words.Contains(wordGuess))
                 {
-                    //Check correct letter AND position
+                    Debug.WriteLine("test2");
                     ColorControl(box0.tbxInputBox, 0);
                     ColorControl(box1.tbxInputBox, 1);
                     ColorControl(box2.tbxInputBox, 2);
                     ColorControl(box3.tbxInputBox, 3);
                     ColorControl(box4.tbxInputBox, 4);
-                
+                    WordDict.OnLineCompleted?.Invoke();
+                   
                 }
+                
             }
         }
        private void ColorControl(TextBox element, int col)

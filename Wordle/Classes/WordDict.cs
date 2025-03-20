@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Diagnostics;
 namespace Wordle.Classes
 {
     class WordDict
@@ -15,10 +16,16 @@ namespace Wordle.Classes
         {
             foreach(var x in File.ReadAllLines(filePath))
             {
-                words.Add(x);
+                words.Add(x.ToUpper());
             }
             
         }
-        
+        public static void WriteDict()
+        {
+            foreach (var x in words)
+            {
+               Debug.WriteLine(x);
+            }
+        }
     }
 }

@@ -1,9 +1,6 @@
-﻿using Microsoft.VisualBasic;
-using System.Diagnostics;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Xml.Linq;
 using Wordle.Classes;
 
 
@@ -18,6 +15,7 @@ namespace Wordle.View.UserControls
         public InputBox()
         {
             InitializeComponent();
+            
             
         }
 
@@ -46,7 +44,7 @@ namespace Wordle.View.UserControls
         
         private void tbxInputBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-           
+            
             if (e.Key == Key.Back)
             {
                 if(string.IsNullOrEmpty(tbxInputBox.Text) && ColNum == 0)
@@ -96,6 +94,9 @@ namespace Wordle.View.UserControls
 
             element.MoveFocus(request);
         }
-        
+        public void NextCaller()
+        {
+            FocusNext(tbxInputBox);
+        }
         }
 }

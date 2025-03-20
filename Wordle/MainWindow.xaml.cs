@@ -16,7 +16,7 @@ public partial class MainWindow : Window
         WordDict.InitializeDict();
         
     }
-
+    
     private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
     {
         if(e.Key == Key.Enter)
