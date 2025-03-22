@@ -23,5 +23,10 @@ public partial class MainWindow : Window
         {
             Debug.WriteLine("window word guess: " + Inputline0.WordGuess);
         }
+        if (e.Key == Key.Tab)
+        {
+            e.Handled = true;
+        }
+        
     }
 }
