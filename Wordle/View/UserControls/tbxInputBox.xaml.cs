@@ -15,8 +15,6 @@ namespace Wordle.View.UserControls
         public InputBox()
         {
             InitializeComponent();
-            
-            
         }
 
         private int colNum;

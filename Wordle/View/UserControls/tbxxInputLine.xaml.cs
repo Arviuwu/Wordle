@@ -86,11 +86,11 @@ namespace Wordle.View.UserControls
         }
        private void ColorControl(TextBox element, int col)
         {
-            if (WordDict.testWord[col] == element.Text[0])
+            if (WordDict.currentWord[col] == element.Text?[0])
             {
                 element.Background = Brushes.Green;
             }
-            else if (WordDict.testWord.Contains(element.Text[0]))
+            else if (WordDict.currentWord.Contains(element.Text[0]))
             {
                element.Background = Brushes.Yellow;
             }

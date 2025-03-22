@@ -14,7 +14,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         WordDict.InitializeDict();
-        
+        WordDict.PickWord();
     }
     
     private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -23,7 +23,5 @@ public partial class MainWindow : Window
         {
             Debug.WriteLine("window word guess: " + Inputline0.WordGuess);
         }
-        
     }
-    
 }
