@@ -78,6 +78,11 @@ namespace Wordle.View.UserControls
                     ColorControl(box2.tbxInputBox, 2);
                     ColorControl(box3.tbxInputBox, 3);
                     ColorControl(box4.tbxInputBox, 4);
+                    if (wordGuess == WordDict.currentWord)
+                    {
+                        Debug.WriteLine("win");
+                        return;
+                    }
                     WordDict.OnLineCompleted?.Invoke();
                    
                 }

@@ -31,6 +31,7 @@ namespace Wordle.Classes
         static public List<string> guessableWords = new List<string>();
         static public string? currentWord = "0";
         static public Random random = new Random();
+        static public Action? StartGameClick;
 
         public static void InitializeDict()
         {

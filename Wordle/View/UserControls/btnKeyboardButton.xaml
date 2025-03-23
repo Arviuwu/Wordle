@@ -7,7 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              MinWidth="40"
-             MaxWidth="70">
+             MaxWidth="70"
+             MaxHeight="80">
     <Grid Margin="4">
         <Button FontSize="20" x:Name="LetterButton" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGray" BorderBrush="Black" BorderThickness="1" Click="LetterButton_Click">
             <TextBlock Text="A"/>

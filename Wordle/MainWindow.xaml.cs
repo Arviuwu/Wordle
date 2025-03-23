@@ -10,23 +10,28 @@ namespace Wordle;
 /// </summary>
 public partial class MainWindow : Window
 {
+    
     public MainWindow()
     {
         InitializeComponent();
+        MainContent.Content = new View.UserControls.Menu();
         WordDict.InitializeDict();
         WordDict.PickWord();
+        WordDict.StartGameClick += ViewGame;
+        
     }
     
     private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
     {
-        if(e.Key == Key.Enter)
-        {
-            Debug.WriteLine("window word guess: " + Inputline0.WordGuess);
-        }
+        
         if (e.Key == Key.Tab)
         {
             e.Handled = true;
         }
         
+    }
+    private void ViewGame()
+    {
+        MainContent.Content = new View.UserControls.GameEng();
     }
 }
