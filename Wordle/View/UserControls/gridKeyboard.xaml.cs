@@ -1,4 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using System.Diagnostics;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Wordle.Classes;
 
 namespace Wordle.View.UserControls
 {
@@ -10,7 +13,8 @@ namespace Wordle.View.UserControls
         public Keyboard()
         {
             InitializeComponent();
+            
         }
-
+        
     }
 }

@@ -6,9 +6,10 @@
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:UserControls="clr-namespace:Wordle.View.UserControls">
-    <Grid>
-        <Grid.RowDefinitions>
+             xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
+             >
+    <Grid Width="100">
+        <Grid.RowDefinitions >
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -25,6 +26,15 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <UserControls:KeyboardButtom Content="A"/>
+        <UserControls:KeyboardButton Grid.Column="0"   Margin="4" ButtonContent="Q"/>
+        <UserControls:KeyboardButton Grid.Column="1"   Margin="4" ButtonContent="W"/>
+        <UserControls:KeyboardButton Grid.Column="2"   Margin="4" ButtonContent="E"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="R"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="T"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="Z"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="U"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="I"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="O"/>
+        <UserControls:KeyboardButton Grid.Column="3"   Margin="4" ButtonContent="P"/>
     </Grid>
 </UserControl>

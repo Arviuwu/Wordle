@@ -89,10 +89,16 @@ namespace Wordle.View.UserControls
             if (WordDict.currentWord[col] == element.Text?[0])
             {
                 element.Background = Brushes.Green;
+                WordDict.correctChars.Add(element.Text[0]);
+                if (WordDict.yellowChars.Contains(element.Text[0]))
+                {
+                    WordDict.yellowChars.Remove(element.Text[0]);
+                }
             }
             else if (WordDict.currentWord.Contains(element.Text[0]))
             {
                element.Background = Brushes.Yellow;
+               WordDict.yellowChars.Add(element.Text[0]);
             }
             else
             {

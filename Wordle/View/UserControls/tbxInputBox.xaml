@@ -6,16 +6,17 @@
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="110" d:DesignWidth="100"
-             Background="DarkGray"
-             
-             >
+             Background="DarkGray"             
+             MinHeight="70"
+             MinWidth="60"
+             MaxHeight="100"
+             MaxWidth="100">
     <Grid>
         <Border  BorderBrush="Black" BorderThickness="1">
             
                 <TextBox 
+                           
                          BorderThickness="0"   
-                          
-                         
                          HorizontalContentAlignment="Center"
                          VerticalContentAlignment="Center"
                          CharacterCasing="Upper"
