@@ -34,6 +34,7 @@
             <UserControls:InputLine x:Name="Inputline2" Grid.Row="2" RowNum="2"/>
             <UserControls:InputLine x:Name="Inputline3" Grid.Row="3" RowNum="3"/>
             <UserControls:InputLine x:Name="Inputline4" Grid.Row="4" RowNum="4"/>
+      
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -78,7 +79,7 @@
             <UserControls:KeyboardButton Grid.Column="4" Grid.Row="2" ButtonContent="V"/>
             <UserControls:KeyboardButton Grid.Column="5" Grid.Row="2" ButtonContent="B"/>
             <UserControls:KeyboardButton Grid.Column="6" Grid.Row="2" ButtonContent="N"/>
-            <UserControls:KeyboardButton Grid.Column="6" Grid.Row="2" ButtonContent="M"/>
+            <UserControls:KeyboardButton Grid.Column="7" Grid.Row="2" ButtonContent="M"/>
 
         </Grid>
 

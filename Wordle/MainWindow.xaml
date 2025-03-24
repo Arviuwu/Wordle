@@ -9,8 +9,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="880" Width="470"
             PreviewKeyDown="Window_PreviewKeyDown" WindowStartupLocation="CenterScreen" 
-        MinWidth="420"
-        MinHeight="920">
+        >
     <Grid>
         <ContentControl Name="MainContent"/>
     </Grid>
