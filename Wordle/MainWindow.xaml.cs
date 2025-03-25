@@ -19,6 +19,7 @@ public partial class MainWindow : Window
         WordDict.PickWord();
         WordDict.StartGameClick += ViewGame;
         
+
     }
     
     private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -34,4 +35,5 @@ public partial class MainWindow : Window
     {
         MainContent.Content = new View.UserControls.GameEng();
     }
+    
 }

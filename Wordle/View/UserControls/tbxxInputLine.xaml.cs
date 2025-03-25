@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Wordle.Classes;
+using Wordle.View;
 
 namespace Wordle.View.UserControls
 {
@@ -88,7 +89,8 @@ namespace Wordle.View.UserControls
                     ColorControl(box4.tbxInputBox, 4);
                     if (wordGuess == WordDict.currentWord)
                     {
-                        Debug.WriteLine("win");
+
+                        WordDict.GameWon.Invoke();
                         return;
                     }
                     WordDict.OnLineCompleted?.Invoke();

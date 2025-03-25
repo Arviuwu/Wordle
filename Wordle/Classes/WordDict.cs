@@ -27,12 +27,14 @@ namespace Wordle.Classes
         static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..","..", "Files", "five_letter_words.txt");
         static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..","..", "Files", "guess_words.txt");
         static public Action? OnLineCompleted;
-        static public Action? GameWon;
+        
         static public string? currentGuess;
         static public List<string> guessableWords = new List<string>();
         static public string? currentWord = "0";
         static public Random random = new Random();
         static public Action? StartGameClick;
+        static public Action? GameLost;
+        static public Action? GameWon;
 
         public static void InitializeDict()
         {
