@@ -48,7 +48,7 @@ namespace Wordle.View.UserControls
         public InputLine()
         {
             InitializeComponent();
-            
+            FocusFirst();
             
         }
         public string GetWordGuess()
@@ -60,10 +60,18 @@ namespace Wordle.View.UserControls
             WordDict.currentGuess = word;
             return word;
         }
-        
+        void FocusFirst()
+        {
+            if (rowNum == 0)
+            {
+                var request = new TraversalRequest(FocusNavigationDirection.First);
 
+                box0.tbxInputBox.MoveFocus(request);
+            }
+        }
         private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            
             if(e.Key == Key.Enter && !String.IsNullOrEmpty(box4.tbxInputBox.Text))
             {
             
@@ -113,7 +121,10 @@ namespace Wordle.View.UserControls
                 WordDict.notContained.Add(element.Text[0]);
             }
         }
-        
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            FocusFirst();
+        }
     }
 }

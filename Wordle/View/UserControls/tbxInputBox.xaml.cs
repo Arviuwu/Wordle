@@ -96,5 +96,10 @@ namespace Wordle.View.UserControls
         {
             FocusNext(tbxInputBox);
         }
+
+        private void UserControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
         }
+    }
 }

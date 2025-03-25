@@ -10,7 +10,8 @@
              MinHeight="70"
              MinWidth="60"
              MaxHeight="100"
-             MaxWidth="100">
+             MaxWidth="100"
+             PreviewMouseDown="UserControl_PreviewMouseDown">
     <Grid>
         <Border  BorderBrush="Black" BorderThickness="1">
             
