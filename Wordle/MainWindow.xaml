@@ -7,10 +7,12 @@
         xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
        
         mc:Ignorable="d"
-        Title="MainWindow" Height="880" Width="470"
-            PreviewKeyDown="Window_PreviewKeyDown" WindowStartupLocation="CenterScreen" 
+        Title="Wordle" Height="880" Width="470"
+            PreviewKeyDown="Window_PreviewKeyDown" WindowStartupLocation="CenterScreen"
+        MinWidth="430"
+        MinHeight="770" 
         >
-    <Grid>
+    <Grid Focusable="True" Name="GridName">
         <ContentControl Name="MainContent"/>
     </Grid>
 </Window>

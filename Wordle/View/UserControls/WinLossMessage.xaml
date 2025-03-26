@@ -5,9 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="DarkGray">
-        <Grid.RowDefinitions>
+             d:DesignHeight="450" d:DesignWidth="800"
+             
+             >
+
+    <Border  Name="Test" CornerRadius="3" BorderBrush="Black" BorderThickness="2" Background="#2e2d2d" Visibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="200"/>
             <RowDefinition MaxHeight="200"/>
             <RowDefinition MaxHeight="200"/>
         </Grid.RowDefinitions>
@@ -15,9 +20,54 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="WinMessage" Grid.ColumnSpan="2" Text="You won!" Background="Green" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300"/>
-        <TextBlock Name="LossMessage" Grid.ColumnSpan="2" Text="You lost" Background="Red" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300" />
-        <Button Name ="btnMenu" Content="Menu" Grid.Column="0" Grid.Row="1"  Click="btnMenu_Click" MaxHeight="100" MaxWidth="200"/>
-        <Button Name ="btnPlayAgain" MaxHeight="100" MaxWidth="200" Content="Play Again" Grid.Column="1"  Grid.Row="1" Click="btnPlayAgain_Click"/>
-    </Grid>
+        <TextBlock Name="WinMessage" 
+                   Grid.ColumnSpan="2" 
+                   Text="You won!" 
+                   Foreground="Green"
+                   FontSize="40" 
+                   FontWeight="Bold" 
+                   TextAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   Panel.ZIndex="1" 
+                   MinWidth="300"
+                   Visibility="Hidden"/>
+        <TextBlock Name="LossMessage" 
+                   Grid.ColumnSpan="2" 
+                   Text="You lost" 
+                   Foreground="Red"
+                   FontSize="40" 
+                   FontWeight="Bold" 
+                   TextAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   Panel.ZIndex="1" 
+                   MinWidth="300" 
+                   Visibility="Hidden"/>
+            <TextBlock Name="WordDisplay" Grid.ColumnSpan="2"  Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White"/>
+
+
+            <Button Name ="btnMenu"  
+                Content="Menu" 
+                Grid.Column="0" 
+                Grid.Row="2"  
+                Click="btnMenu_Click" 
+                MinHeight="70" 
+                MinWidth="130"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                Visibility="Hidden"/>
+            <Button Name ="btnPlayAgain" 
+                MinHeight="70" 
+                MinWidth="130" 
+                Content="Play Again" 
+                Grid.Column="1"  
+                Grid.Row="2" 
+                Click="btnPlayAgain_Click"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                Visibility="Hidden"/>
+        </Grid></Border>
 </UserControl>

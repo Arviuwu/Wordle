@@ -11,7 +11,7 @@
              MaxHeight="80"
              Focusable="False">
     <Grid Margin="4">
-        <Button FontSize="20" x:Name="LetterButton" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGray" BorderBrush="Black" BorderThickness="1" Click="LetterButton_Click">
+        <Button PreviewMouseDown="LetterButton_PreviewMouseDown" FontSize="20" x:Name="LetterButton" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGray" BorderBrush="Black" BorderThickness="1" Click="LetterButton_Click">
             <TextBlock Text="A" Focusable="False"/>
         </Button>
     </Grid>

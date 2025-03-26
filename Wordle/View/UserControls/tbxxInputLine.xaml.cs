@@ -89,6 +89,7 @@ namespace Wordle.View.UserControls
                     {
 
                         WordDict.GameWon?.Invoke();
+                        WordDict.GameWonCheck = true;
                         return;
                     }
                     if(RowNum == 4 && !string.IsNullOrEmpty(box4.tbxInputBox.Text))

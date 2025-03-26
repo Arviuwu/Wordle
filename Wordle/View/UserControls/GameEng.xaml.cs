@@ -25,9 +25,10 @@ namespace Wordle.View.UserControls
         {
             InitializeComponent();
             WordDict.PickWord();
+            WordDict.GameWonCheck = false;
+            WordDict.correctChars.Clear();
+            WordDict.yellowChars.Clear();
+            WordDict.notContained.Clear();
         }
-
-
-
     }
 }

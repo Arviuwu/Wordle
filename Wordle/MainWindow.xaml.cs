@@ -19,9 +19,16 @@ public partial class MainWindow : Window
         
         WordDict.StartGameClick += ViewGame;
         WordDict.ClickMainMenu += ViewMenu;
+        WordDict.GameLost += FocusGrid;
+        WordDict.GameWon += FocusGrid;
+
 
     }
-    
+    void FocusGrid()
+    {
+        Debug.WriteLine("FocusGrid");
+        GridName.Focus();
+    }
     private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
     {
         
@@ -40,5 +47,10 @@ public partial class MainWindow : Window
     {
         MainContent.Content = new View.UserControls.Menu();
     }
+    private void RemoveFocus()
+    {
+        this.Focus();
+    }
+
     
 }

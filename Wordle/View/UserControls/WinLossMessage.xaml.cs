@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using Wordle.Classes;
 
 namespace Wordle.View.UserControls
@@ -22,13 +12,24 @@ namespace Wordle.View.UserControls
         public WinLossMessage()
         {
             InitializeComponent();
+            
             WordDict.GameWon += GameWon;
             WordDict.GameLost += GameLost;
             
+          
         }
-         void GameWon()
+        private string customText;
+
+        public string CustomText
         {
-            
+            get { return customText; }
+            set { customText = value; }
+        }
+
+        void GameWon()
+        {
+            WordDisplay.Text =$"The word was:\n{WordDict.currentWord}";
+            Test.Visibility = Visibility.Visible;
                 WinMessage.Visibility = Visibility.Visible;
                 LossMessage.Visibility = Visibility.Hidden;
                 btnMenu.Visibility = Visibility.Visible;
@@ -38,6 +39,8 @@ namespace Wordle.View.UserControls
         }
         void GameLost()
         {
+            WordDisplay.Text = $"The word was:\n{WordDict.currentWord}";
+            Test.Visibility = Visibility.Visible;
             WinMessage.Visibility = Visibility.Hidden;
             LossMessage.Visibility = Visibility.Visible;
             btnMenu.Visibility = Visibility.Visible;

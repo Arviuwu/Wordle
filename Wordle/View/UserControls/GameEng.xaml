@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"      Height="auto" Width="auto"
-             xmlns:UserControls="clr-namespace:Wordle.View.UserControls">
+             xmlns:UserControls="clr-namespace:Wordle.View.UserControls"
+             Background="#E4F1F6">
     <Grid>
 
         <Grid.ColumnDefinitions >
@@ -18,7 +19,7 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <UserControls:WinLossMessage Grid.Column="1" HorizontalAlignment="Center" Panel.ZIndex="1"/>
+        <UserControls:WinLossMessage Margin="0,100,0,50" Grid.Column="1" HorizontalAlignment="Center" Panel.ZIndex="1"/>
 
         <Grid Grid.Column="1" Margin="0 10 0 10" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>

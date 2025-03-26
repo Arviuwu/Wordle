@@ -27,9 +27,7 @@ namespace Wordle.View.UserControls
         {
             if (LetterButton.Content != null && WordDict.notContained.Contains(LetterButton.Content.ToString()[0]))
             {
-                Color customColor = Color.FromArgb(255, 78, 78, 78);
-                SolidColorBrush customBrush = new SolidColorBrush(customColor);
-                LetterButton.Background = customBrush;
+                LetterButton.Background = WordDict.ReturnBrush(255, 78, 78, 78);
             }
             else if(LetterButton.Content != null && WordDict.yellowChars.Contains(LetterButton.Content.ToString()[0]))
             {
@@ -44,6 +42,11 @@ namespace Wordle.View.UserControls
         {
             LetterButton.Content = ButtonContent;
             Debug.WriteLine(LetterButton.Content);
+        }
+
+        private void LetterButton_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

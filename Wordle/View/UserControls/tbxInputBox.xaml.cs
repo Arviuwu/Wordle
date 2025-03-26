@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Wordle.Classes;
@@ -15,6 +16,8 @@ namespace Wordle.View.UserControls
         public InputBox()
         {
             InitializeComponent();
+            
+            
         }
 
         private int colNum;
@@ -65,15 +68,18 @@ namespace Wordle.View.UserControls
                 }
             }
 
-            if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text) && WordDict.words.Contains(WordDict.currentGuess))
+            if(e.Key == Key.Enter && ColNum == 4 && !String.IsNullOrEmpty(tbxInputBox.Text) && WordDict.words.Contains(WordDict.currentGuess) && !WordDict.GameWonCheck)
             {
 
                 FocusNext(tbxInputBox); 
                 
                 
             }
+            
+               
+            
         }
-
+       
         void FocusLeft(UIElement element)
         {
             var request = new TraversalRequest(FocusNavigationDirection.Previous);
@@ -97,6 +103,7 @@ namespace Wordle.View.UserControls
             FocusNext(tbxInputBox);
         }
 
+       
         private void UserControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
