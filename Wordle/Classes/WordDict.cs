@@ -14,8 +14,8 @@ namespace Wordle.Classes
         static public List<char> notContained = new List<char> { };
         static public List<char> yellowChars = new List<char> { };
         static public List<char> correctChars = new List<char> { };
-        static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..","..", "Files", "five_letter_words.txt");
-        static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..","..", "Files", "guess_words.txt");
+        static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "five_letter_words.txt");
+        static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "guess_words.txt");
         static public Action? OnLineCompleted;
         static public bool GameWonCheck = false;
         static public string? currentGuess;
