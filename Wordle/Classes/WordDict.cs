@@ -6,18 +6,7 @@ namespace Wordle.Classes
     {
         public WordDict()
         {
-            words = new List<string> { };
-            testWord = "SUPER";
-            notContained = new List<char> { };
-            yellowChars = new List<char> { };
-            correctChars = new List<char> { };
-           PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Files", "five_letter_words.txt");
-            PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Files", "5000-more-common.txt");
-            
-            currentGuess = string.Empty;
-            guessableWords = new List<string>();
-            currentWord = string.Empty;
-            Random random = new Random();
+           
         }
         static public List<string> words = new List<string> { };
         static public string testWord = "SUPER";
@@ -35,6 +24,7 @@ namespace Wordle.Classes
         static public Action? StartGameClick;
         static public Action? GameLost;
         static public Action? GameWon;
+        static public Action? ClickMainMenu;
 
         public static void InitializeDict()
         {

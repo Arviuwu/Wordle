@@ -77,11 +77,9 @@ namespace Wordle.View.UserControls
             {
             
                 GetWordGuess();
-                
-                Debug.WriteLine("test");
                 if (WordDict.words.Contains(wordGuess))
                 {
-                    Debug.WriteLine("test2");
+                  
                     ColorControl(box0.tbxInputBox, 0);
                     ColorControl(box1.tbxInputBox, 1);
                     ColorControl(box2.tbxInputBox, 2);
@@ -90,8 +88,12 @@ namespace Wordle.View.UserControls
                     if (wordGuess == WordDict.currentWord)
                     {
 
-                        WordDict.GameWon.Invoke();
+                        WordDict.GameWon?.Invoke();
                         return;
+                    }
+                    if(RowNum == 4 && !string.IsNullOrEmpty(box4.tbxInputBox.Text))
+                    {
+                        WordDict.GameLost?.Invoke();
                     }
                     WordDict.OnLineCompleted?.Invoke();
                    

@@ -6,8 +6,18 @@
              xmlns:local="clr-namespace:Wordle.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Name="WinMessage" Grid.Column="1" Text="You won!" Background="Green" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300" Visibility="Hidden"/>
-        <TextBlock Name="LossMessage" Grid.Column="1" Text="You lost" Background="Red" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300" Visibility="Hidden"/>
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="200"/>
+            <RowDefinition MaxHeight="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="WinMessage" Grid.ColumnSpan="2" Text="You won!" Background="Green" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300"/>
+        <TextBlock Name="LossMessage" Grid.ColumnSpan="2" Text="You lost" Background="Red" FontSize="40" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" MinWidth="300" />
+        <Button Name ="btnMenu" Content="Menu" Grid.Column="0" Grid.Row="1"  Click="btnMenu_Click" MaxHeight="100" MaxWidth="200"/>
+        <Button Name ="btnPlayAgain" MaxHeight="100" MaxWidth="200" Content="Play Again" Grid.Column="1"  Grid.Row="1" Click="btnPlayAgain_Click"/>
     </Grid>
 </UserControl>

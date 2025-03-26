@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Wordle.Classes;
 
 namespace Wordle.View.UserControls
 {
@@ -23,6 +24,10 @@ namespace Wordle.View.UserControls
         public GameEng()
         {
             InitializeComponent();
+            WordDict.PickWord();
         }
+
+
+
     }
 }

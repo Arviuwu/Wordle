@@ -31,6 +31,8 @@ namespace Wordle.View.UserControls
             
                 WinMessage.Visibility = Visibility.Visible;
                 LossMessage.Visibility = Visibility.Hidden;
+                btnMenu.Visibility = Visibility.Visible;
+                btnPlayAgain.Visibility = Visibility.Visible;
             
 
         }
@@ -38,7 +40,18 @@ namespace Wordle.View.UserControls
         {
             WinMessage.Visibility = Visibility.Hidden;
             LossMessage.Visibility = Visibility.Visible;
+            btnMenu.Visibility = Visibility.Visible;
+            btnPlayAgain.Visibility = Visibility.Visible;
         }
-       
+
+        private void btnPlayAgain_Click(object sender, RoutedEventArgs e)
+        {
+            WordDict.StartGameClick?.Invoke();
+        }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            WordDict.ClickMainMenu?.Invoke();
+        }
     }
 }

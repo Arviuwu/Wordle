@@ -82,7 +82,5 @@
             <UserControls:KeyboardButton Grid.Column="7" Grid.Row="2" ButtonContent="M"/>
 
         </Grid>
-
-
     </Grid>
 </UserControl>

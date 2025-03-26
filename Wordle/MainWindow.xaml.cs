@@ -16,9 +16,9 @@ public partial class MainWindow : Window
         InitializeComponent();
         MainContent.Content = new View.UserControls.Menu();
         WordDict.InitializeDict();
-        WordDict.PickWord();
-        WordDict.StartGameClick += ViewGame;
         
+        WordDict.StartGameClick += ViewGame;
+        WordDict.ClickMainMenu += ViewMenu;
 
     }
     
@@ -34,6 +34,11 @@ public partial class MainWindow : Window
     private void ViewGame()
     {
         MainContent.Content = new View.UserControls.GameEng();
+    }
+
+    private void ViewMenu()
+    {
+        MainContent.Content = new View.UserControls.Menu();
     }
     
 }
