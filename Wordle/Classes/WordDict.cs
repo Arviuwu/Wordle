@@ -14,8 +14,9 @@ namespace Wordle.Classes
         static public List<char> notContained = new List<char> { };
         static public List<char> yellowChars = new List<char> { };
         static public List<char> correctChars = new List<char> { };
-        static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "five_letter_words.txt");
-        static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "guess_words.txt");
+        static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "five_letter_words_eng.txt");
+        static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "guessable_words_eng.txt");
+       
         static public Action? OnLineCompleted;
         static public bool GameWonCheck = false;
         static public string? currentGuess;
@@ -39,13 +40,6 @@ namespace Wordle.Classes
             Debug.WriteLine("dict initialized with " + words.Count()+" words");
         }
         
-        public static void WriteDict()
-        {
-            foreach (var x in words)
-            {
-               Debug.WriteLine(x);
-            }
-        }
         public static string PickWord()
         {
             foreach(var x in File.ReadAllLines(PathGuessWords))
@@ -63,6 +57,33 @@ namespace Wordle.Classes
             Color customColor = Color.FromArgb(a, b, c, d);
             SolidColorBrush customBrush = new SolidColorBrush(DesignGray);
             return customBrush;
+        }
+        public static void FilterWords()
+        {
+           
+            string inputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "wordlist-german.txt"); ;   // Path to the input file
+            string outputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "five_letter_words_ger.txt"); ; // Path to save the filtered words
+
+            try
+            {
+                // Read all lines from the file
+                string[] lines = File.ReadAllLines(inputFilePath);
+
+                // Process each line separately, splitting into words and filtering five-letter words
+                var fiveLetterWords = lines
+                    .SelectMany(line => line.Split(new char[] { ' ', '\t', '.', ',', '!', '?', ';', ':', '-', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                    .Where(word => word.Length == 5)
+                    .Distinct(); // Optional: remove duplicates
+
+                // Write the filtered words to the output file
+                File.WriteAllLines(outputFilePath, fiveLetterWords);
+                
+                
+            }
+            catch (Exception)
+            {
+                Debug.WriteLine("error");
+            }
         }
     }
 }

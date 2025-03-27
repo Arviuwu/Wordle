@@ -21,7 +21,7 @@ public partial class MainWindow : Window
         WordDict.ClickMainMenu += ViewMenu;
         WordDict.GameLost += FocusGrid;
         WordDict.GameWon += FocusGrid;
-
+        WordDict.FilterWords();
 
     }
     void FocusGrid()
