@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Diagnostics;
 using System.Windows.Media;
+using Wordle.View.UserControls;
 namespace Wordle.Classes
 {
     class WordDict
@@ -14,8 +15,8 @@ namespace Wordle.Classes
         static public List<char> notContained = new List<char> { };
         static public List<char> yellowChars = new List<char> { };
         static public List<char> correctChars = new List<char> { };
-        static public string PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "five_letter_words_eng.txt");
-        static public string PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files", "guessable_words_eng.txt");
+        static public string PathAllWords ="";
+        static public string PathGuessWords="";
        
         static public Action? OnLineCompleted;
         static public bool GameWonCheck = false;
@@ -26,10 +27,11 @@ namespace Wordle.Classes
         static public Action? StartGameClick;
         static public Action? GameLost;
         static public Action? GameWon;
+        static public Action? LanguageChanged;
         static public Action? ClickMainMenu;
         static Color DesignGray = Color.FromArgb(255, 78, 78, 78);
         public SolidColorBrush DarkerGray = new SolidColorBrush(DesignGray);
-
+        
         
         public static void InitializeDict()
         {
@@ -61,29 +63,7 @@ namespace Wordle.Classes
         public static void FilterWords()
         {
            
-            string inputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "wordlist-german.txt"); ;   // Path to the input file
-            string outputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "five_letter_words_ger.txt"); ; // Path to save the filtered words
-
-            try
-            {
-                // Read all lines from the file
-                string[] lines = File.ReadAllLines(inputFilePath);
-
-                // Process each line separately, splitting into words and filtering five-letter words
-                var fiveLetterWords = lines
-                    .SelectMany(line => line.Split(new char[] { ' ', '\t', '.', ',', '!', '?', ';', ':', '-', '\r' }, StringSplitOptions.RemoveEmptyEntries))
-                    .Where(word => word.Length == 5)
-                    .Distinct(); // Optional: remove duplicates
-
-                // Write the filtered words to the output file
-                File.WriteAllLines(outputFilePath, fiveLetterWords);
-                
-                
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("error");
-            }
+           
         }
     }
 }

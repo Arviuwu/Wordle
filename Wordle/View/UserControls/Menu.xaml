@@ -7,6 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button Content="Start Game" Width="100" Height="100" Click="Game_Start"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Grid.Column="1" Content="Start Game" Width="100" Height="100" Click="Game_Start"/>
+        <Button Name="LanguageToggle" Click="LanguageToggle_Click" Grid.Column="2" Width="100" Height="100" Content="ENG"/>
     </Grid>
 </UserControl>

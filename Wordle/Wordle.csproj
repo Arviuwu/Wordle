@@ -12,20 +12,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Files\five_letter_words.txt" />
     <None Remove="Files\five_letter_words_eng.txt" />
     <None Remove="Files\five_letter_words_ger.txt" />
     <None Remove="Files\guessable_words_eng.txt" />
+    <None Remove="Files\guessable_words_ger.txt" />
     <None Remove="Files\guess_words.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Files\five_letter_words.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Files\five_letter_words_eng.txt" />
     <Content Include="Files\five_letter_words_ger.txt" />
     <Content Include="Files\guessable_words_eng.txt" />
+    <Content Include="Files\guessable_words_ger.txt" />
   </ItemGroup>
 
   

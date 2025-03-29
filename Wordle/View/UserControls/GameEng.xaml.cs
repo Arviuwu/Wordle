@@ -11,8 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Wordle.Classes;
+using System.IO;
+using System.Diagnostics;
+
 
 namespace Wordle.View.UserControls
 {
@@ -24,11 +26,15 @@ namespace Wordle.View.UserControls
         public GameEng()
         {
             InitializeComponent();
-            WordDict.PickWord();
+            
             WordDict.GameWonCheck = false;
             WordDict.correctChars.Clear();
             WordDict.yellowChars.Clear();
             WordDict.notContained.Clear();
+            WordDict.PathAllWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "five_letter_words_eng.txt");
+            WordDict.PathGuessWords = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "guessable_words_eng.txt");
+            WordDict.InitializeDict();
+            WordDict.PickWord();
         }
     }
 }
